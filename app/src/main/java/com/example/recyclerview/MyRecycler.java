@@ -11,6 +11,8 @@ import android.widget.ToggleButton;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.BreakIterator;
+
 public class MyRecycler extends RecyclerView.Adapter<MyRecycler.MyViewHolde>{
     String[] data;
     Context context;
@@ -37,7 +39,7 @@ public class MyRecycler extends RecyclerView.Adapter<MyRecycler.MyViewHolde>{
 
     @Override
     public void onBindViewHolder(@NonNull MyRecycler.MyViewHolde holder, int position) {
-        holder.tV2.setText(data[position]);
+        holder.tV3.setText(data[position]);
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,7 +64,7 @@ public class MyRecycler extends RecyclerView.Adapter<MyRecycler.MyViewHolde>{
         LinearLayout mainLayout;
         public MyViewHolde(@NonNull View itemView) {
             super(itemView);
-            tV2=itemView.findViewById(R.id.tV2);
+            tV3=itemView.findViewById(R.id.tV2);
             mainLayout=itemView.findViewById(R.id.mainLayout);
         }
     }
